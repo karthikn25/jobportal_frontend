@@ -1,0 +1,138 @@
+#topbar-container {
+    height: 100%;
+    width: 74%;
+    margin: 20px;
+    position: sticky;
+
+}
+
+#topbar-box {
+    background: #fff;
+    width: 70vw;
+}
+#mobile-menu{
+    display: none;
+}
+
+#topbar-details {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 20px 20px 0px;
+    box-shadow: 8px 8px 6px 2px rgb(158, 156, 156);
+    border-radius: 5px;
+}
+
+#topbar-logo {
+    >img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+}
+
+#topbar-search {
+    >input {
+        background: #D3D4DA;
+        border: none;
+        padding-left: 10px;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    >input::placeholder {
+        color: black;
+        font-weight: 500;
+    }
+
+    >i {
+        position: relative;
+        right: 25px;
+        cursor: pointer;
+    }
+}
+
+#topbar-nav {
+    font-weight: 800;
+    cursor: pointer;
+    
+}
+@media (max-width:735px) and (min-width:600px) {
+    #topbar-nav {
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 12px;
+        
+    }
+}
+
+@media (max-width:600px) {
+    #topbar-container {
+        height: 100%;
+        width: 100%;
+        margin: 20px;
+        position: sticky;
+    
+    }
+    #topbar-box {
+        background: #fff;
+        width: 95vw;
+    }
+    #mobile-menu{
+        display: block;
+    }
+}
+@media (max-width:456px) and (min-width:200px) {
+    #topbar-details {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        padding: 10px 20px 0px;
+        box-shadow: 8px 8px 6px 2px rgb(158, 156, 156);
+        border-radius: 5px;
+    }
+    
+    #topbar-logo {
+        >img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+    }
+    
+    #topbar-search {
+        >input {
+            background: #D3D4DA;
+            border: none;
+            padding-left: 10px;
+            height: 25px;
+            border-radius: 5px;
+            width: 100px;
+        }
+    
+        >input::placeholder {
+            color: black;
+            font-weight: 500;
+            font-size: 10px;
+        }
+    
+        >i {
+            position: relative;
+            right: 20px;
+            font-size: 10px;
+        }
+    }
+    
+    #topbar-nav {
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 12px;
+    }
+}
+@media (max-width:320px) {
+    #topbar-nav {
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 10px;
+    }
+}

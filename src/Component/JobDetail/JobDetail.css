@@ -1,0 +1,47 @@
+#job-detail-container{
+height: 100%;
+width: 100%;
+box-sizing: border-box;
+padding: 50px 100px;
+display: flex;
+flex-direction: column;
+}
+
+#company-name-date{
+    display: flex;
+    justify-content: space-between;
+}
+#more-details{
+    padding: 30px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#job-more{
+    display: flex;
+    justify-content: space-between;
+}
+#job-detail-asked-questions{
+    >h2{
+        text-align: center;
+    }
+    >ul{
+        list-style: square;
+        >li{
+            padding-top: 10px;
+        }
+        >li::after{
+            content: "?";
+        }
+    }
+}
+@media (max-width:400px) {
+    #job-detail-container{
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        }
+}

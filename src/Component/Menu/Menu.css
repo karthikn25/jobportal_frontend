@@ -1,0 +1,8 @@
+#menu{
+    display: none;
+}
+@media (max-width:600px) {
+    #menu{
+        display: block;
+    }
+}
