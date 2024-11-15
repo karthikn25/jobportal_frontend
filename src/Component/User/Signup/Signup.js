@@ -3,7 +3,6 @@ import "./Signup.css";
 import logo from "../../../Images/JobSearchWebLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import img from "../../../Images/jobsearch1.webp";
-import {URL} from '../../../Server.js'
 
 export default function Signup() {
   const [show, setShow] = useState();
@@ -25,7 +24,7 @@ export default function Signup() {
       password
     }
 
-    var res = await fetch(`${URL}/user/signup`,{
+    var res = await fetch(`${process.env.REACT_APP_URL}/user/signup`,{
       method:"POST",
       body:JSON.stringify(userData),
       headers:{

@@ -30,10 +30,10 @@ const id = sessionStorage.getItem("id");
 
 
   const handleShowUser = async(e)=>{
-    const res = await fetch(`${URL}/user/getuser/${id}`,{
+    const res = await fetch(`${process.env.REACT_APP_URL}/user/getuser/${id}`,{
       method:"GET",
       headers:{
-        "Content-Type":"application/json"
+        "x-auth-token":token
       }
      
     })
@@ -43,7 +43,7 @@ const id = sessionStorage.getItem("id");
   }
 
   const handlePost = async()=>{
-    const res = await fetch(`${URL}/notes/data`,{
+    const res = await fetch(`${process.env.REACT_APP_URL}/notes/data`,{
       method:"GET",
       headers:{
         "x-auth-token":token

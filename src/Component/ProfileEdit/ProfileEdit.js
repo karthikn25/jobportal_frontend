@@ -3,7 +3,6 @@ import "./ProfileEdit.css";
 import Base from "../../Base/Base";
 import profile from '../../Images/PROFILE.jpg'
 import { useNavigate } from "react-router-dom";
-import { URL } from "../../Server";
 
 export default function ProfileEdit() {
 
@@ -54,7 +53,7 @@ export default function ProfileEdit() {
       if (formData.avatar) {
         data.append('avatar', formData.avatar);
       }
-    const res = await fetch(`${URL}/user/edit/${id}`,{
+    const res = await fetch(`${process.env.REACT_APP_URL}/user/edit/${id}`,{
       method:"PUT",
       body:data,
       

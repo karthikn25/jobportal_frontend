@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Signin.css";
 import img from "../../../Images/JobSearchWebLogo.png";
 import { Link, useNavigate } from "react-router-dom";
-import {URL} from '../../../Server.js' 
 
 export default function Signin() {
   const [show,setShow]=useState();
@@ -23,7 +22,7 @@ export default function Signin() {
       email,
       password
     }
-    const res = await fetch(`${URL}/user/login`,{
+    const res = await fetch(`${process.env.REACT_APP_URL}/user/login`,{
       method:"POST",
       body:JSON.stringify(userData),
       headers:{

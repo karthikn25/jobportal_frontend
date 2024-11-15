@@ -3,7 +3,6 @@ import "./Home.css";
 import Base from "../../Base/Base";
 import profile from "../../Images/PROFILE.jpg";
 import { useNavigate } from "react-router-dom";
-import { URL } from "../../Server";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -18,7 +17,7 @@ export default function Home() {
       navigate("/", { replace: true });
     }
     const getPostData = async () => {
-      const res = await fetch(`${URL}/notes/getall/${id}`, {
+      const res = await fetch(`${process.env.REACT_APP_URL}/notes/getall/${id}`, {
         method: "GET",
         headers: {
           "x-auth-token": token,

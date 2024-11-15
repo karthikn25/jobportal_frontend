@@ -3,7 +3,6 @@ import "./Reset.css";
 import img from "../../../Images/jobsearch4.jpg";
 import logo from "../../../Images/JobSearchWebLogo.png";
 import { useNavigate, useParams } from "react-router-dom";
-import { URL } from "../../../Server";
 
 export default function Reset() {
 
@@ -27,7 +26,7 @@ export default function Reset() {
       setError("Password doesn't match");
       setSuccess("")
     }else{
-      const res = await fetch(`${URL}/user/reset/${id}/${token}`,{
+      const res = await fetch(`${process.env.REACT_APP_URL}/user/reset/${id}/${token}`,{
         method:"PUT",
         body:JSON.stringify({password}),
         headers:{

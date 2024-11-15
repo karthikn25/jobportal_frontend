@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './SearchHome.css';
-import { URL } from '../../Server';
 import profile from "../../Images/PROFILE.jpg";
 import Base from '../../Base/Base';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -22,7 +21,7 @@ export default function SearchHome() {
       navigate("/", { replace: true });
     }
     const getPostData = async () => {
-      const res = await fetch(`${URL}/notes/search/${keyword}`, {
+      const res = await fetch(`${process.env.REACT_APP_URL}/notes/search/${keyword}`, {
         method: "GET",
         headers: {
           "x-auth-token": token,

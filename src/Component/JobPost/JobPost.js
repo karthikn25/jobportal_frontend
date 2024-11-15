@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./JobPost.css";
 import Base from "../../Base/Base";
 import { useNavigate, useParams } from "react-router-dom";
-import { URL } from "../../Server";
 
 export default function JobPost() {
 
@@ -36,7 +35,7 @@ export default function JobPost() {
     e.preventDefault();
 
 
-    const res = await fetch(`${URL}/notes/create`, {
+    const res = await fetch(`${process.env.REACT_APP_URL}/notes/create`, {
       method: "POST",
       body: JSON.stringify(formData),
       headers: {

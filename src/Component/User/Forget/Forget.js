@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Forget.css";
 import img from "../../../Images/jobsearch3.webp";
 import logo from "../../../Images/JobSearchWebLogo.png";
-import { URL } from "../../../Server";
 
 export default function Forget() {
 
@@ -19,7 +18,7 @@ export default function Forget() {
       email
     }
 
-    const res = await fetch(`${URL}/user/forget-password`,{
+    const res = await fetch(`${process.env.REACT_APP_URL}/user/forget-password`,{
       method:"POST",
       body:JSON.stringify(userData),
       headers:{

@@ -1,1 +1,1 @@
-export const URL = "http://localhost:5678";
+export const URL = "https://jobportal-backend-nl0l.onrender.com"

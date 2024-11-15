@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./JobDetail.css";
 import Base from "../../Base/Base";
 import { useParams } from "react-router-dom";
-import { URL } from "../../Server";
 
 export default function JobDetail() {
 const {id}=useParams();
@@ -14,7 +13,7 @@ const token = sessionStorage.getItem("token");
 
   useEffect(()=>{
     const getData = async()=>{
-      const res = await fetch(`${URL}/notes/getsingle/${id}`,{
+      const res = await fetch(`${process.env.REACT_APP_URL}/notes/getsingle/${id}`,{
         method:"GET",
         headers:{
           "x-auth-token":token
