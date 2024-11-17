@@ -37,8 +37,8 @@ export default function Signin() {
     }else{
       setError("")
       setSuccess(data.message);
-      sessionStorage.setItem("token",data.token)
-      sessionStorage.setItem("id",data.user._id)
+      localStorage.setItem("token",data.token)
+      localStorage.setItem("id",data.user._id)
       setTimeout(()=>{
         navigate(`/home/${data.token}`)
       },2000)

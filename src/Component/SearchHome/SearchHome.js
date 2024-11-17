@@ -10,22 +10,22 @@ export default function SearchHome() {
   const [post, setPost] = useState([]);
   const [product,setProduct]=useState([]);
 
-  const id = sessionStorage.getItem("id");
-  const token = sessionStorage.getItem("token");
+  const id = localStorage.getItem("id");
+  const token = localStorage.getItem("token");
 
   const { keyword }= useParams();
 
 
   useEffect(() => {
-    if (!sessionStorage.getItem("token")) {
+    if (!localStorage.getItem("token")) {
       navigate("/", { replace: true });
     }
     const getPostData = async () => {
       const res = await fetch(`${process.env.REACT_APP_URL}/notes/search/${keyword}`, {
         method: "GET",
-        headers: {
-          "x-auth-token": token,
-        },
+        // headers: {
+        //   "x-auth-token": token,
+        // },
       });
       const data = await res.json();
       setPost(data);

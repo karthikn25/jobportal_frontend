@@ -34,9 +34,9 @@ export default function ProfileEdit() {
    const [success,setSuccess]=useState();
    const [error,setError]=useState();
 
-   const id = sessionStorage.getItem("id");
+   const id = localStorage.getItem("id");
 
-   const token = sessionStorage.getItem("token");
+   const token = localStorage.getItem("token");
 
 
    const navigate = useNavigate();
