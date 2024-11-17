@@ -8,7 +8,7 @@ export default function Topbar() {
 
   const [keyword,setKeyword]=useState();
   
-  const token = sessionStorage.getItem("token")
+  const token = localStorage.getItem("token")
 
   const handleSearch = async(e)=>{
     e.preventDefault();
